@@ -29,7 +29,9 @@ arrowRight.addEventListener('click', (e) => {
 })
 
 /// Mettre des points sur le banner pour le défilement des images /// 
+/// J'ai tenter ce code mais je n'ai pas bien compris pourquoi il ne fonctionnait pas // 
 
+/*
 document.addEventListener('DOMContentLoaded', function (){
 	const carousel = document.querySelector('banner');
 	const dotsContainer = document.querySelector ('banner-dots');
@@ -50,5 +52,12 @@ document.addEventListener('DOMContentLoaded', function (){
 		updateCarousel();
 	})
 })
+*/ 
 
+const dotsSlider = document.querySelector("div .dots");
+const bulletSlider = "<div class='dot'></div";
+
+for (let slide of slides) {
+	dotsSlider.insertAdjacentHTML('afterbegin', bulletSlider);
+}
 
