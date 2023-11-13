@@ -37,3 +37,19 @@ for (let slide of slides) {
 	dotsSlider.style.background = "black";
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    const dot = document.querySelectorAll('.dot');
+
+    listItems.forEach(function(item) {
+        const dotsSlider = document.createElement('span');
+        dot.classList.add('custom-dot');
+        item.insertBefore(dotsSlider, dot.firstChild);
+    });
+});
+
+let numero = 0;
+function nextSlide (sens){
+	numero = numero + sens; 
+	imgSlide.src ="img/slideshow" + slides[numero].img;
+}
+
